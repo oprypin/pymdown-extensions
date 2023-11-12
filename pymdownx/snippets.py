@@ -82,7 +82,7 @@ class SnippetPreprocessor(Preprocessor):
         base = config.get('base_path')
         if isinstance(base, (str, os.PathLike)):
             base = [base]
-        self.base_path = [os.path.abspath(b) for b in base]
+        self.base_path = base
         self.restrict_base_path = config['restrict_base_path']
         self.encoding = config.get('encoding')
         self.check_paths = config.get('check_paths')
